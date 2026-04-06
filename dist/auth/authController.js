@@ -1,0 +1,26 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.authController = void 0;
+const authService_1 = require("./authService");
+class AuthController {
+    async register(req, res) {
+        try {
+            const user = await authService_1.authService.register(req.body);
+            res.status(201).json(user);
+        }
+        catch (e) {
+            res.status(400).json({ error: e.message });
+        }
+    }
+    async login(req, res) {
+        try {
+            const user = await authService_1.authService.login(req.body);
+            res.status(201).json(user);
+        }
+        catch (e) {
+            res.status(401).json({ error: e.message });
+        }
+    }
+}
+exports.authController = new AuthController();
+//# sourceMappingURL=authController.js.map
