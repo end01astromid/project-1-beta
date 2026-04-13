@@ -1,11 +1,13 @@
-export class BaseServ { 
-    protected model: any
+import { Model, Document} from 'mongoose'
 
-    constructor(models: any){
+export class BaseService <T extends Document> {
+    protected model: Model<T>
+
+    constructor(models: Model<T>){
         this.model = models
     }
 
-    async findOneByeEmail(email: any){
-        return await this.model.findOne({email})
+    async findOneByEmail(email: string){
+        return await this.model.findOne({email}).exec()
     }
 }

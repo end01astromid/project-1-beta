@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BaseServ = void 0;
-class BaseServ {
+exports.BaseService = void 0;
+class BaseService {
     model;
     constructor(models) {
         this.model = models;
     }
-    async findOneByeEmail(email) {
-        return await this.model.findOne({ email });
+    async findOneByEmail(email) {
+        return await this.model.findOne({ email }).exec();
     }
 }
-exports.BaseServ = BaseServ;
+exports.BaseService = BaseService;
 //# sourceMappingURL=baseService.js.map

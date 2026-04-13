@@ -9,6 +9,7 @@ require("dotenv/config");
 const authController_1 = require("./auth/authController");
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
+// Маршруты
 app.post('/auth/register', authController_1.authController.register);
 app.post('/auth/login', authController_1.authController.login);
 async function startMongo() {

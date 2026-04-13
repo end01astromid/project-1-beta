@@ -1,35 +1,12 @@
-import { Schema } from "mongoose";
-export declare const UserModule: import("mongoose").Model<{
+import { Document, Types } from "mongoose";
+export interface IUser extends Document {
+    _id: Types.ObjectId;
+    email: string;
     password: string;
-    roule: string;
-    email?: string | null;
-}, {}, {}, {}, import("mongoose").Document<unknown, {}, {
-    password: string;
-    roule: string;
-    email?: string | null;
-}, {}, import("mongoose").DefaultSchemaOptions> & {
-    password: string;
-    roule: string;
-    email?: string | null;
-} & {
-    _id: import("mongoose").Types.ObjectId;
-} & {
-    __v: number;
-}, Schema<any, import("mongoose").Model<any, any, any, any, any, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, {
-    password: string;
-    roule: string;
-    email?: string | null;
-}, import("mongoose").Document<unknown, {}, import("mongoose").FlatRecord<{
-    password: string;
-    roule: string;
-    email?: string | null;
-}>, {}, import("mongoose").ResolveSchemaOptions<import("mongoose").DefaultSchemaOptions>> & import("mongoose").FlatRecord<{
-    password: string;
-    roule: string;
-    email?: string | null;
+}
+export declare const UserModule: import("mongoose").Model<IUser, {}, {}, {}, Document<unknown, {}, IUser, {}, {}> & IUser & Required<{
+    _id: Types.ObjectId;
 }> & {
-    _id: import("mongoose").Types.ObjectId;
-} & {
     __v: number;
-}>>;
+}, any>;
 //# sourceMappingURL=users.d.ts.map

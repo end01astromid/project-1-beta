@@ -2,10 +2,19 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserModule = void 0;
 const mongoose_1 = require("mongoose");
-const UserShema = new mongoose_1.Schema({
-    email: { type: String, requred: true, unique: true },
-    password: { type: String, required: true },
-    roule: { type: String, default: "human" },
-});
-exports.UserModule = (0, mongoose_1.model)('User', UserShema);
+const userSchema = new mongoose_1.Schema({
+    email: {
+        type: String,
+        required: true,
+        unique: true,
+        lowercase: true,
+        trim: true
+    },
+    password: {
+        type: String,
+        required: true,
+        minlength: 6
+    }
+}, { timestamps: true });
+exports.UserModule = (0, mongoose_1.model)('User', userSchema);
 //# sourceMappingURL=users.js.map

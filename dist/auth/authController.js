@@ -6,7 +6,10 @@ class AuthController {
     async register(req, res) {
         try {
             const user = await authService_1.authService.register(req.body);
-            res.status(201).json(user);
+            res.status(201).json({
+                message: "Пользователь успешно создан",
+                user: { id: user._id, email: user.email }
+            });
         }
         catch (e) {
             res.status(400).json({ error: e.message });
@@ -14,8 +17,8 @@ class AuthController {
     }
     async login(req, res) {
         try {
-            const user = await authService_1.authService.login(req.body);
-            res.status(201).json(user);
+            const result = await authService_1.authService.login(req.body);
+            res.json(result);
         }
         catch (e) {
             res.status(401).json({ error: e.message });

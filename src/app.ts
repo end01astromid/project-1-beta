@@ -6,8 +6,9 @@ import { authController } from "./auth/authController";
 const app = express();
 app.use(express.json());
 
-app.post('/auth/register', authController.register)
-app.post('/auth/login', authController.login)
+// Маршруты
+app.post('/auth/register', authController.register);
+app.post('/auth/login', authController.login);
 
 
 async function startMongo(){

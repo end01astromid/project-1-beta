@@ -1,1 +1,1 @@
-{"version":3,"file":"baseService.d.ts","sourceRoot":"","sources":["../../src/base/baseService.ts"],"names":[],"mappings":"AAAA,qBAAa,QAAQ;IACjB,SAAS,CAAC,KAAK,EAAE,GAAG,CAAA;gBAER,MAAM,EAAE,GAAG;IAIjB,eAAe,CAAC,KAAK,EAAE,GAAG;CAGnC"}
+{"version":3,"file":"baseService.d.ts","sourceRoot":"","sources":["../../src/base/baseService.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,KAAK,EAAE,QAAQ,EAAC,MAAM,UAAU,CAAA;AAEzC,qBAAa,WAAW,CAAE,CAAC,SAAS,QAAQ;IACxC,SAAS,CAAC,KAAK,EAAE,KAAK,CAAC,CAAC,CAAC,CAAA;gBAEb,MAAM,EAAE,KAAK,CAAC,CAAC,CAAC;IAItB,cAAc,CAAC,KAAK,EAAE,MAAM;;;;;CAGrC"}
