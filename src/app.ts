@@ -1,14 +1,12 @@
 import express from "express"
 import mongoose from "mongoose"
 import "dotenv/config"
-import { authController } from "./auth/authController";
+import authRoutes from "./auth/authRoutes";
 
 const app = express();
 app.use(express.json());
 
-// Маршруты
-app.post('/auth/register', authController.register);
-app.post('/auth/login', authController.login);
+app.use("/auth", authRoutes);
 
 
 async function startMongo(){

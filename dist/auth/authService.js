@@ -39,11 +39,12 @@ class AuthService extends baseService_1.BaseService {
         if (!isMatch) {
             throw new Error('Неверный email или пароль');
         }
-        // Создаём JWT токен
+        //put-data/user
         const payload = {
             userId: user._id.toString(),
             email: user.email
         };
+        //create token
         const token = jsonwebtoken_1.default.sign(payload, JWT_SECRET, { expiresIn: JWT_EXPIRES_IN });
         return {
             message: "Успешный вход",
@@ -56,4 +57,3 @@ class AuthService extends baseService_1.BaseService {
     }
 }
 exports.authService = new AuthService();
-//# sourceMappingURL=authService.js.map

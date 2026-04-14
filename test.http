@@ -19,3 +19,9 @@ Content-Type: application/json
   "password": "123456"
 }
 
+
+### 2 Token 
+GET http://localhost:3000/auth/myProfile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQ4ZjZhMjc1ZTdmOTg0ODdhODkzZjciLCJlbWFpbCI6InN1bHRhbkBleGFtcGxlLmNvbSIsImlhdCI6MTc3NjE3MjI5NywiZXhwIjoxNzc2Nzc3MDk3fQ.JFk49ogrn1Mgwpny7HEE2lsNBZ27NaBhgqNT1jeQF4M
+

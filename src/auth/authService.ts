@@ -42,13 +42,13 @@ class AuthService extends BaseService<IUser>{
         if(!isMatch){
            throw new Error('Неверный email или пароль');
         }
-        // Создаём JWT токен
+        //put-data/user
         const payload: JwtPayload = {
             userId: user._id.toString(),
             email: user.email
         }
-
-       const token = jwt.sign(payload,JWT_SECRET!,
+        //create token
+       const token = jwt.sign(payload,JWT_SECRET!,                                                     
         {expiresIn: JWT_EXPIRES_IN as any})
 
        return {

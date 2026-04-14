@@ -17,4 +17,3 @@ const userSchema = new mongoose_1.Schema({
     }
 }, { timestamps: true });
 exports.UserModule = (0, mongoose_1.model)('User', userSchema);
-//# sourceMappingURL=users.js.map

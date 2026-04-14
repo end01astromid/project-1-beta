@@ -11,4 +11,3 @@ class BaseService {
     }
 }
 exports.BaseService = BaseService;
-//# sourceMappingURL=baseService.js.map

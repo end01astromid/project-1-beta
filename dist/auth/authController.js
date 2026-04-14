@@ -24,6 +24,16 @@ class AuthController {
             res.status(401).json({ error: e.message });
         }
     }
+    async myProfile(req, res) {
+        try {
+            res.json({
+                message: "Profile, пользователя",
+                user: req.user
+            });
+        }
+        catch (e) {
+            res.status(401).json({ error: e.message });
+        }
+    }
 }
 exports.authController = new AuthController();
-//# sourceMappingURL=authController.js.map

@@ -6,12 +6,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const mongoose_1 = __importDefault(require("mongoose"));
 require("dotenv/config");
-const authController_1 = require("./auth/authController");
+const authRoutes_1 = __importDefault(require("./auth/authRoutes"));
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
-// Маршруты
-app.post('/auth/register', authController_1.authController.register);
-app.post('/auth/login', authController_1.authController.login);
+app.use("/auth", authRoutes_1.default);
 async function startMongo() {
     try {
         const mongoURI = process.env.mongo_connect;
@@ -28,4 +26,3 @@ async function startMongo() {
     }
 }
 startMongo();
-//# sourceMappingURL=app.js.map
