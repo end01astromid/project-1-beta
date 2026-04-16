@@ -18,4 +18,16 @@ export interface AuthResponse {
         email: string;
     };
 }
+export interface CreateTodoData {
+    title: string;
+}
+export interface updateTodoData {
+    title?: string;
+}
+export interface todoResponse {
+    id: string;
+    title: string;
+    createdAt: Date;
+    updatedAt: Date;
+}
 //# sourceMappingURL=types.d.ts.map

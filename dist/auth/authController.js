@@ -8,7 +8,7 @@ class AuthController {
             const user = await authService_1.authService.register(req.body);
             res.status(201).json({
                 message: "Пользователь успешно создан",
-                user: { id: user._id, email: user.email }
+                user: { id: user._id, email: user.email, }
             });
         }
         catch (e) {

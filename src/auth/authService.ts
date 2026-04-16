@@ -30,6 +30,7 @@ class AuthService extends BaseService<IUser>{
         })
         return user
     }
+    
 
     async login(data: LoginData): Promise<AuthResponse> {
         const user = await this.findOneByEmail(data.email)
@@ -45,7 +46,7 @@ class AuthService extends BaseService<IUser>{
         //put-data/user
         const payload: JwtPayload = {
             userId: user._id.toString(),
-            email: user.email
+            email: user.email 
         }
         //create token
        const token = jwt.sign(payload,JWT_SECRET!,                                                     
