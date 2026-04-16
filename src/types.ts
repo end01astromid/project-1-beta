@@ -36,12 +36,12 @@ export interface updateTodoData {
    title?: string,
 }
 
-export interface todoResponse {
-    id: string,
-    title: string,
-    createdAt: Date;
-    updatedAt: Date;
-}
+// export interface todoResponse {
+//     id: string,
+//     title: string,
+//     createdAt: Date;
+//     updatedAt: Date;
+// }
 
 // export interface GetTodosResponse {
 //     message: string,
