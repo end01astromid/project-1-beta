@@ -1,3 +1,5 @@
+///auth/register/auth/jwt
+
 export interface RegisterData {
     email: string,
     password: string
@@ -21,3 +23,27 @@ export interface AuthResponse {
         email: string;
     }
 }
+
+
+
+
+
+export interface CreateTodoData {
+   title: string,
+}
+
+export interface updateTodoData {
+   title?: string,
+}
+
+export interface todoResponse {
+    id: string,
+    title: string,
+    createdAt: Date;
+    updatedAt: Date;
+}
+
+// export interface GetTodosResponse {
+//     message: string,
+//     todos: todoResponse[];
+// }
