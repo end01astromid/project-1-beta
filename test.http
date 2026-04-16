@@ -29,13 +29,12 @@ Authorization: Bearer
 ### Create todo
 POST http://localhost:3000/auth/todos
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWUwZjA3YWQ3ZWRiNWQ1MDk5NzE3Y2MiLCJlbWFpbCI6InN1bHRhbi10ZXN0N0BleGFtcGxlLmNvbSIsImlhdCI6MTc3NjM0OTMzMywiZXhwIjoxNzc2OTU0MTMzfQ.pdZCCGARhxEohEOAHN_YX38Vz7wHFH72SjXM_fa-or8
-
+Authorization: Bearer 
 {
   "title": "bla bla bla"
 }
 
 
 ### Delete todo
-DELETE http://localhost:3000/auth/todos/69e0f0a3d7edb5d5099717cf
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWUwZjA3YWQ3ZWRiNWQ1MDk5NzE3Y2MiLCJlbWFpbCI6InN1bHRhbi10ZXN0N0BleGFtcGxlLmNvbSIsImlhdCI6MTc3NjM0OTMzMywiZXhwIjoxNzc2OTU0MTMzfQ.pdZCCGARhxEohEOAHN_YX38Vz7wHFH72SjXM_fa-or8
+DELETE http://localhost:3000/auth/todos/{Тут ID}
+Authorization: Bearer 
