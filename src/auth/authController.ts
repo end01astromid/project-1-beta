@@ -11,7 +11,7 @@ class AuthController {
 
       res.status(201).json({
         message: "Пользователь успешно создан",
-        user: {id: user._id, email:user.email}
+        user: {id: user._id, email:user.email,}
       })
     }catch(e: any){
       res.status(400).json({ error: e.message });
